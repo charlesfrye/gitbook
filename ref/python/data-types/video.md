@@ -2,11 +2,11 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/data_types.py#L1047-L1225)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/data_types.py#L1047-L1236)
 
 
 
-Wandb representation of video.
+Format a video for logging to W&B.
 
 ```python
 Video(
@@ -30,11 +30,26 @@ Video(
 
 
 
+#### Examples:
+
+### Log a numpy array as a video
+<!--yeadoc-test:log-video-numpy-->
+```python
+import numpy as np
+import wandb
+
+wandb.init()
+# axes are (time, channel, height, width)
+frames = np.random.randint(low=0, high=256, size=(10, 3, 100, 100), dtype=np.uint8)
+wandb.log({"video": wandb.Video(frames, fps=4)})
+```
+
+
 ## Methods
 
 <h3 id="encode"><code>encode</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/data_types.py#L1116-L1153)
+[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/data_types.py#L1127-L1164)
 
 ```python
 encode() -> None

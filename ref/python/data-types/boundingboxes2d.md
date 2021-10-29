@@ -2,11 +2,11 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/data_types.py#L1450-L1709)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/data_types.py#L1514-L1828)
 
 
 
-Wandb class for logging 2D bounding boxes on images, useful for tasks like object detection
+Format images with 2D bounding box overlays for logging to W&B.
 
 ```python
 BoundingBoxes2D(
@@ -28,14 +28,22 @@ BoundingBoxes2D(
 
 #### Examples:
 
-Log a set of predicted and ground truth bounding boxes for a given image
+### Log bounding boxes for a single image
+<!--yeadoc-test:boundingbox-2d-->
 ```python
+import numpy as np
+import wandb
+
+wandb.init()
+image = np.random.randint(low=0, high=256, size=(200, 300, 3))
+
 class_labels = {
     0: "person",
     1: "car",
     2: "road",
     3: "building"
 }
+
 img = wandb.Image(image, boxes={
     "predictions": {
         "box_data": [
@@ -69,23 +77,31 @@ img = wandb.Image(image, boxes={
                     "loss": 0.7
                 }
             },
-            ...
             # Log as many boxes an as needed
         ],
         "class_labels": class_labels
-    },
-    # Log each meaningful group of boxes with a unique key name
-    "ground_truth": {
-    ...
     }
 })
 
 wandb.log({"driving_scene": img})
 ```
 
-Prepare an image with bounding boxes to be added to a wandb.Table
+### Log a bounding box overlay to a Table
+<!--yeadoc-test:bb2d-image-with-labels-->
 ```python
-raw_image_path = "sample_image.png"
+
+import numpy as np
+import wandb
+
+wandb.init()
+image = np.random.randint(low=0, high=256, size=(200, 300, 3))
+
+class_labels = {
+    0: "person",
+    1: "car",
+    2: "road",
+    3: "building"
+}
 
 class_set = wandb.Classes([
     {"name" : "person", "id" : 0},
@@ -94,8 +110,48 @@ class_set = wandb.Classes([
     {"name" : "building", "id" : 3}
 ])
 
-image_with_boxes = wandb.Image(raw_image_path, classes=class_set,
-    boxes=[...identical to previous example...])
+img = wandb.Image(image, boxes={
+    "predictions": {
+        "box_data": [
+            {
+                # one box expressed in the default relative/fractional domain
+                "position": {
+                    "minX": 0.1,
+                    "maxX": 0.2,
+                    "minY": 0.3,
+                    "maxY": 0.4
+                },
+                "class_id" : 1,
+                "box_caption": class_labels[1],
+                "scores" : {
+                    "acc": 0.2,
+                    "loss": 1.2
+                }
+            },
+            {
+                # another box expressed in the pixel domain
+                "position": {
+                    "middle": [150, 20],
+                    "width": 68,
+                    "height": 112
+                },
+                "domain" : "pixel",
+                "class_id" : 3,
+                "box_caption": "a building",
+                "scores" : {
+                    "acc": 0.5,
+                    "loss": 0.7
+                }
+            },
+            # Log as many boxes an as needed
+        ],
+        "class_labels": class_labels
+    }
+}, classes=class_set)
+
+table = wandb.Table(columns=["image"])
+table.add_data(img)
+wandb.log({"driving_scene": table})
 ```
 
 
@@ -103,7 +159,7 @@ image_with_boxes = wandb.Image(raw_image_path, classes=class_set,
 
 <h3 id="type_name"><code>type_name</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/data_types.py#L1626-L1628)
+[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/data_types.py#L1745-L1747)
 
 ```python
 @classmethod
@@ -115,7 +171,7 @@ type_name() -> str
 
 <h3 id="validate"><code>validate</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/data_types.py#L1630-L1691)
+[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/data_types.py#L1749-L1810)
 
 ```python
 validate(

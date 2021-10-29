@@ -2,7 +2,7 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/wandb_run.py#L1102-L1318)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/wandb_run.py#L1104-L1330)
 
 
 
@@ -79,7 +79,7 @@ the data on the client side or you may get degraded performance.
 For more and more detailed examples, see
 [our guides to logging](https://docs.wandb.com/guides/track/log).
 
-Basic usage
+### Basic usage
 <!--yeadoc-test:init-and-log-basic-->
 ```python
 import wandb
@@ -87,7 +87,7 @@ wandb.init()
 wandb.log({'accuracy': 0.9, 'epoch': 5})
 ```
 
-Incremental logging
+### Incremental logging
 <!--yeadoc-test:init-and-log-incremental-->
 ```python
 import wandb
@@ -97,7 +97,7 @@ wandb.log({'loss': 0.2}, commit=False)
 wandb.log({'accuracy': 0.8})
 ```
 
-Histogram
+### Histogram
 <!--yeadoc-test:init-and-log-histogram-->
 ```python
 import numpy as np
@@ -109,7 +109,7 @@ wandb.init()
 wandb.log({"gradients": wandb.Histogram(gradients)})
 ```
 
-Image from numpy
+### Image from numpy
 <!--yeadoc-test:init-and-log-image-numpy-->
 ```python
 import numpy as np
@@ -124,7 +124,7 @@ for i in range(3):
 wandb.log({"examples": examples})
 ```
 
-Image from PIL
+### Image from PIL
 <!--yeadoc-test:init-and-log-image-pillow-->
 ```python
 import numpy as np
@@ -141,7 +141,7 @@ for i in range(3):
 wandb.log({"examples": examples})
 ```
 
-Video from numpy
+### Video from numpy
 <!--yeadoc-test:init-and-log-video-numpy-->
 ```python
 import numpy as np
@@ -153,17 +153,27 @@ frames = np.random.randint(low=0, high=256, size=(10, 3, 100, 100), dtype=np.uin
 wandb.log({"video": wandb.Video(frames, fps=4)})
 ```
 
-Matplotlib Plot
+### Matplotlib Plot
+<!--yeadoc-test:init-and-log-matplotlib-->
 ```python
-wandb.log({"chart": plt})
+from matplotlib import pyplot as plt
+import numpy as np
+import wandb
+
+wandb.init()
+fig, ax = plt.subplots()
+x = np.linspace(0, 10)
+y = x * x
+ax.plot(x, y)  # plot y = x^2
+wandb.log({"chart": fig})
 ```
 
-PR Curve
+### PR Curve
 ```python
 wandb.log({'pr': wandb.plots.precision_recall(y_test, y_probas, labels)})
 ```
 
-3D Object
+### 3D Object
 ```python
 wandb.log({"generated_samples":
 [wandb.Object3D(open("sample.obj")),

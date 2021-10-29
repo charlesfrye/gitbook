@@ -2,7 +2,7 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/integration_utils/data_logging.py#L18-L209)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/integration_utils/data_logging.py#L18-L209)
 
 
 
@@ -42,7 +42,7 @@ practices.
 
 <h3 id="log_predictions"><code>log_predictions</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/integration_utils/data_logging.py#L162-L209)
+[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/integration_utils/data_logging.py#L162-L209)
 
 ```python
 log_predictions(
@@ -71,7 +71,7 @@ vl.log_predictions(vl.make_predictions(self.model.predict))
 
 <h3 id="make_predictions"><code>make_predictions</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/a71719bdde474b8048d942c5b1be20afadaef59a/wandb/sdk/integration_utils/data_logging.py#L148-L160)
+[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/sdk/integration_utils/data_logging.py#L148-L160)
 
 ```python
 make_predictions(
