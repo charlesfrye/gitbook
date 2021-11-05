@@ -2,7 +2,7 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/apis/public.py#L1166-L1201)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/apis/public.py#L1178-L1213)
 
 
 
@@ -29,7 +29,7 @@ Project(
 
 <h3 id="artifacts_types"><code>artifacts_types</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/apis/public.py#L1199-L1201)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/apis/public.py#L1211-L1213)
 
 ```python
 artifacts_types(
@@ -42,7 +42,7 @@ artifacts_types(
 
 <h3 id="display"><code>display</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/apis/public.py#L736-L747)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/apis/public.py#L748-L759)
 
 ```python
 display(
@@ -55,7 +55,7 @@ Display this object in jupyter
 
 <h3 id="snake_to_camel"><code>snake_to_camel</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/apis/public.py#L732-L734)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/apis/public.py#L744-L746)
 
 ```python
 snake_to_camel(
@@ -68,7 +68,7 @@ snake_to_camel(
 
 <h3 id="to_html"><code>to_html</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/apis/public.py#L1183-L1191)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/apis/public.py#L1195-L1203)
 
 ```python
 to_html(

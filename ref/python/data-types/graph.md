@@ -2,7 +2,7 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L1281-L1441)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L1288-L1448)
 
 
 
@@ -34,7 +34,7 @@ Import a keras model:
 
 <h3 id="add_edge"><code>add_edge</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L1367-L1371)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L1374-L1378)
 
 ```python
 add_edge(
@@ -47,7 +47,7 @@ add_edge(
 
 <h3 id="add_node"><code>add_node</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L1353-L1365)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L1360-L1372)
 
 ```python
 add_node(
@@ -60,7 +60,7 @@ add_node(
 
 <h3 id="from_keras"><code>from_keras</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L1373-L1402)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L1380-L1409)
 
 ```python
 @classmethod
@@ -74,7 +74,7 @@ from_keras(
 
 <h3 id="pprint"><code>pprint</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L1347-L1351)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L1354-L1358)
 
 ```python
 pprint()
@@ -85,7 +85,7 @@ pprint()
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L1344-L1345)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L1351-L1352)
 
 ```python
 __getitem__(

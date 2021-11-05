@@ -3,14 +3,22 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/__init__.py)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/__init__.py)
 
 
 
-Wandb has special data types for logging rich visualizations.
+This module defines data types for logging rich, interactive visualizations to W&B.
 
 
-All of the special data types are subclasses of WBValue. All of the data types
+Data types include common media types, like images, audio, and videos,
+flexible containers for information, like tables and HTML, and more.
+
+For more on logging media, see [our guide](https://docs.wandb.com/guides/track/log/media)
+
+For more on logging structured data for interactive dataset and model analysis,
+see [our guide to W&B Tables](https://docs.wandb.com/guides/data-vis).
+
+All of these special data types are subclasses of WBValue. All of the data types
 serialize to JSON, since that is what wandb uses to save the objects locally
 and upload them to the W&B server.
 

@@ -3,13 +3,22 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/__init__.py)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/__init__.py)
 
 
 
+Use the Public API to export or update data that you have saved to W&B.
 
 
+Before using this API, you'll want to log data from your script — check the
+[Quickstart](https://docs.wandb.ai/quickstart) for more details.
 
+You might use the Public API to
+ - update metadata or metrics for an experiment after it has been completed,
+ - pull down your results as a dataframe for post-hoc analysis in a Jupyter notebook, or
+ - check your saved model artifacts for those tagged as `ready-to-deploy`.
+
+For more on using the Public API, check out [our guide](https://docs.wandb.com/guides/track/public-api-guide).
 
 ## Classes
 

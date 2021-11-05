@@ -2,7 +2,7 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L110-L830)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L117-L837)
 
 
 
@@ -105,7 +105,7 @@ due to lack of consistent typing.
 
 <h3 id="add_column"><code>add_column</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L726-L765)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L733-L772)
 
 ```python
 add_column(
@@ -122,7 +122,7 @@ Arguments
 
 <h3 id="add_computed_columns"><code>add_computed_columns</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L808-L830)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L815-L837)
 
 ```python
 add_computed_columns(
@@ -141,7 +141,7 @@ Adds one or more computed columns based on existing data
 
 <h3 id="add_data"><code>add_data</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L407-L437)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L414-L444)
 
 ```python
 add_data(
@@ -154,7 +154,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="add_row"><code>add_row</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L403-L405)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L410-L412)
 
 ```python
 add_row(
@@ -167,7 +167,7 @@ add_row(
 
 <h3 id="cast"><code>cast</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L302-L356)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L309-L363)
 
 ```python
 cast(
@@ -188,7 +188,7 @@ Casts a column to a specific type
 
 <h3 id="get_column"><code>get_column</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L767-L790)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L774-L797)
 
 ```python
 get_column(
@@ -205,7 +205,7 @@ Arguments
 
 <h3 id="get_index"><code>get_index</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L792-L799)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L799-L806)
 
 ```python
 get_index()
@@ -216,7 +216,7 @@ Returns an array of row indexes which can be used in other tables to create link
 
 <h3 id="index_ref"><code>index_ref</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L801-L806)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L808-L813)
 
 ```python
 index_ref(
@@ -229,7 +229,7 @@ Get a reference to a particular row index in the table
 
 <h3 id="iterrows"><code>iterrows</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L605-L618)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L612-L625)
 
 ```python
 iterrows()
@@ -246,7 +246,7 @@ row : List[any]
 
 <h3 id="set_fk"><code>set_fk</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L625-L629)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L632-L636)
 
 ```python
 set_fk(
@@ -259,7 +259,7 @@ set_fk(
 
 <h3 id="set_pk"><code>set_pk</code></h3>
 
-[View source](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/data_types.py#L620-L623)
+[View source](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/data_types.py#L627-L630)
 
 ```python
 set_pk(

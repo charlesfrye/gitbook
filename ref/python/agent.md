@@ -2,7 +2,7 @@
 
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/ae78783f1c183faca3c2a866b2aa25dbe4219ad7/wandb/wandb_agent.py#L526-L586)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/341e249f17302703b79544d82bd382af88498cb9/wandb/wandb_agent.py#L526-L587)
 
 
 
@@ -32,29 +32,30 @@ by server.
 
 #### Examples:
 
- Run a sample sweep over a function:
+Run a sample sweep over a function:
+<!--yeadoc-test:one-parameter-sweep-agent-->
 ```python
- import wandb
- sweep_configuration = {
-     "name": "my-awesome-sweep",
-     "metric": {"name": "accuracy", "goal": "maximize"},
-     "method": "grid",
-     "parameters": {
-         "a": {
-             "values": [1, 2, 3, 4]
-         }
-     }
- }
+import wandb
+sweep_configuration = {
+    "name": "my-awesome-sweep",
+    "metric": {"name": "accuracy", "goal": "maximize"},
+    "method": "grid",
+    "parameters": {
+        "a": {
+            "values": [1, 2, 3, 4]
+        }
+    }
+}
 
- def my_train_func():
-     # read the current value of parameter "a" from wandb.config
-     wandb.init()
-     a = wandb.config.a
+def my_train_func():
+    # read the current value of parameter "a" from wandb.config
+    wandb.init()
+    a = wandb.config.a
 
-     wandb.log({"a": a, "accuracy": a + 1})
+    wandb.log({"a": a, "accuracy": a + 1})
 
- sweep_id = wandb.sweep(sweep_configuration)
+sweep_id = wandb.sweep(sweep_configuration)
 
- # run the sweep
- wandb.agent(sweep_id, function=my_train_func)
- ```
+# run the sweep
+wandb.agent(sweep_id, function=my_train_func)
+```
